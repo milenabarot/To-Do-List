@@ -1,0 +1,88 @@
+/* core styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bree Serif', serif;
+    margin: 0;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+.header input[type="text"] {
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    background-color: lightblue;
+    transition: 0.7s ease-in-out;
+    outline: none;
+}
+
+.header input[type="text"]:hover {
+    background-color: grey;
+
+}
+
+.addButton {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: lightcyan;
+    transition: 0.7s ease-in-out;
+}
+
+.addButton:hover {
+    background-color: rgb(151, 248, 255);
+}
+
+
+/* list styles */
+
+.containerList {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem {
+    padding-top: 5px;
+    list-style: none;
+    align-self: center;
+    width: 340px;
+}
+
+.item {
+    padding: 5px;
+}
+
+.editButton,
+.removeButton {
+    border: none;
+    cursor: pointer;
+    background-color: lightcyan;
+    font-size: 15px;
+}
+
+.listItem input[type="text"] {
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    transition: 0.7s ease-in-out;
+    outline: none;
+}
