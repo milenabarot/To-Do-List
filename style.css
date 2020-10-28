@@ -50,33 +50,37 @@ body {
 }
 
 
+
+.clear {
+    text-align: center;
+    padding: 10px;
+}
+
+
+#date {
+    padding: 10px;
+}
+
 /* list styles */
 
-.containerList {
+.content {
     display: flex;
     flex-direction: column;
 }
 
-.listItem {
+#list {
     padding-top: 5px;
     list-style: none;
     align-self: center;
-    width: 340px;
 }
 
-.item {
+.text {
     padding: 5px;
 }
 
-.editButton,
-.removeButton {
-    border: none;
-    cursor: pointer;
-    background-color: lightcyan;
-    font-size: 15px;
-}
 
-.listItem input[type="text"] {
+
+.item input[type="text"] {
     border: none;
     font-size: 15px;
     padding: 5px;
@@ -85,4 +89,46 @@ body {
     background-color: white;
     transition: 0.7s ease-in-out;
     outline: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+/* check/cross boxes and line through classes */
+
+.checkBox {
+    border: 3px solid black;
+    cursor: pointer;
+    background-color: lightcyan;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 18px;
+}
+
+
+
+.removeButton {
+    border: none;
+    cursor: pointer;
+    background-color: lightcyan;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tickBox {
+    background-image: url("/check\ image.png");
+    border: 1px solid black;
+    cursor: pointer;
+    min-height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 24px;
+}
+
+
+.lineThrough {
+    text-decoration: line-through;
+    color: red;
 }
