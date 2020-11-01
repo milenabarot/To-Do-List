@@ -33,9 +33,9 @@ function addToDo(toDo, id, done, bin) {
     const LINE = done ? LINE_THROUGH : "";
 
     const item = `<li class="item">
-        <button class="${DONE}" id="${id}" onclick=""></button>
+        <button class="${DONE}" id="${id}" onclick="completeToDo(event)"></button>
         <input type="text" class="text ${LINE}" value="${toDo}">
-        <button class="removeButton" id="${id}" onclick="">Remove</button>  
+        <button class="removeButton" id="${id}" onclick="removeToDo(event)">Remove</button>  
         </li>`;
     
     const position = "beforeend";
@@ -67,16 +67,64 @@ const addItemButtonClick = function () {
 
 // complete to do function
 
+const completeToDo = function (event) {
 
+    const listItemElement = event.target;
 
-
+    listItemElement.classList.toggle(CHECK);
+    listItemElement.classList.toggle(UNCHECK);
+    listItemElement.nextElementSibling.classList.toggle(LINE_THROUGH);
+    
+    // making the done property in the correct object equal to the opposite of the value it currently is - changing false to true and true to false- to update data store, so recognises if needs to be styled as CHECK or UNCHECK class 
+    
+    LIST[listItemElement.id].done = !LIST[listItemElement.id].done;
+ 
+}
 
 
 
 // remove to do function
 
+const removeToDo = function (event) {
+    
+    event.target.parentElement.remove();
+    LIST[event.target.id].bin = true;
+
+    
+}
+
+
+// Local storage
 
 
 
 
-// 
+
+
+
+
+
+
+
+// class Citreon {
+//     constructor(model, topSpeed) {
+//         this.brand = 'Citreon';
+//         this.wheels = 4;
+//         this.model = model;
+//         this.topSpeed = topSpeed;
+//     }
+    
+//     getTopSpeed() {
+//         console.log(`The ${this.brand} ${this.model} has a top speed of ${this.topSpeed} mph`)
+//     }
+
+//     introduce() {
+//         console.log(`Hello, I am a ${this.brand} ${this.model} and I have a ${this.wheels} wheels.`)
+//     }
+// }
+
+// const c1 = new Citreon('C1', 120);
+// const c3 = new Citreon('C3', 150);
+
+// c1.introduce();
+// c3.introduce();
