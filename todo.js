@@ -149,6 +149,11 @@ const editToDo = function (event) {
 
 }
 
+const doggy = document.querySelector("#doggy");
 
 
-
+fetch('https://dog.ceo/api/breed/sheepdog/english/images/random')
+    .then(response => response.json())
+    .then(response => {
+        doggy.src = response.message;
+    });
