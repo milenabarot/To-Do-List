@@ -32,7 +32,7 @@ if (data) {
 // load items to user's interface
 
 function loadList(array) {
-    array.forEach(function (item) {
+    array.forEach(function (item) {    //callback function- passing a function as a parameter 
         addToDo(item.name, item.id, item.done, item.bin);
     });
 }
@@ -62,7 +62,7 @@ function addToDo(toDo, id, done, bin) {
 
     const item = `<li class="item">
         <button class="${DONE}" id="${id}" onclick="completeToDo(event)"></button>
-        <input type="text" class="text ${LINE}" value="${toDo}">
+        <input id="${id}" type="text" oninput="editToDo(event)" class="text ${LINE}" value="${toDo}">
         <button class="removeButton" id="${id}" onclick="removeToDo(event)">Remove</button>  
         </li>`;
     
@@ -89,7 +89,8 @@ const addItemButtonClick = function () {
             bin: false
         });
 
-        // add item to local storage (this code must be written everywhere where the LIST array is updated)
+        // add item to local storage (this code must be written everywhere where the LIST array is updated) TODO name in local storage is defined here after an item is added to the LIST
+        
         localStorage.setItem("TODO", JSON.stringify(LIST));
         
         id++;
@@ -126,10 +127,28 @@ const removeToDo = function (event) {
     event.target.parentElement.remove();
     LIST[event.target.id].bin = true;
 
+    // add item to local storage (this code must be written everywhere where the LIST array is updated)
+    localStorage.setItem("TODO", JSON.stringify(LIST));
     
 }
 
 
 
-
 // Edit function to edit list items
+
+const editToDo = function (event) {
+
+    const itemData = event.target.value;
+    
+//getting the id of the object in the LIST, finding the name which is the input value and making it equal to the new value you just typed in
+
+    LIST[event.target.id].name = itemData;
+
+    localStorage.setItem("TODO", JSON.stringify(LIST));
+
+
+}
+
+
+
+
