@@ -13,8 +13,36 @@ const LINE_THROUGH = "lineThrough";
 
 // Variables for list and id
 
-let LIST = [];
-let  id = 0;
+let LIST, id;
+
+// get item from local storage 
+
+let data = localStorage.getItem("TODO");
+
+// check if data is not empty
+if (data) {
+    LIST = JSON.parse(data);
+    id = LIST.length; //set the id to the last one in the list
+    loadList(LIST); // load the list to the use interface
+} else {
+    // if data is empty
+    LIST = [];
+    id = 0;
+}
+// load items to user's interface
+
+function loadList(array) {
+    array.forEach(function (item) {
+        addToDo(item.name, item.id, item.done, item.bin);
+    });
+}
+
+// clear the local storage
+clear.addEventListener("click", function () {
+    localStorage.clear();
+    location.reload(); 
+})
+
 
 // Show today's date
 
@@ -60,6 +88,10 @@ const addItemButtonClick = function () {
             done: false,
             bin: false
         });
+
+        // add item to local storage (this code must be written everywhere where the LIST array is updated)
+        localStorage.setItem("TODO", JSON.stringify(LIST));
+        
         id++;
     }
     input.value = "";
@@ -78,6 +110,10 @@ const completeToDo = function (event) {
     // making the done property in the correct object equal to the opposite of the value it currently is - changing false to true and true to false- to update data store, so recognises if needs to be styled as CHECK or UNCHECK class 
     
     LIST[listItemElement.id].done = !LIST[listItemElement.id].done;
+
+    // add item to local storage (this code must be written everywhere where the LIST array is updated)
+
+    localStorage.setItem("TODO", JSON.stringify(LIST));
  
 }
 
@@ -94,37 +130,6 @@ const removeToDo = function (event) {
 }
 
 
-// Local storage
 
 
-
-
-
-
-
-
-
-
-
-// class Citreon {
-//     constructor(model, topSpeed) {
-//         this.brand = 'Citreon';
-//         this.wheels = 4;
-//         this.model = model;
-//         this.topSpeed = topSpeed;
-//     }
-    
-//     getTopSpeed() {
-//         console.log(`The ${this.brand} ${this.model} has a top speed of ${this.topSpeed} mph`)
-//     }
-
-//     introduce() {
-//         console.log(`Hello, I am a ${this.brand} ${this.model} and I have a ${this.wheels} wheels.`)
-//     }
-// }
-
-// const c1 = new Citreon('C1', 120);
-// const c3 = new Citreon('C3', 150);
-
-// c1.introduce();
-// c3.introduce();
+// Edit function to edit list items
