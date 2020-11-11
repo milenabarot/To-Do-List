@@ -11,7 +11,9 @@ body {
 
 section {
     font-family: 'Bree Serif', serif;
-    margin: 130px 450px;
+    margin: 10% 32%;
+    max-width: 650px;
+    min-width: 350px;
     padding: 55px 50px;
     background-color: rgb(197, 216, 242, 0.4);
     border-radius: 25px;
