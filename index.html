@@ -13,37 +13,38 @@
 </head>
 
 <body>
-<header class= "header">
-    <h1>To Do List</h1> 
-    <div class="clear">
-        <i class="refresh-icon">Refresh</i>
-    </div>
-    <div id="date"></div>
-    <div class="add-to-do">
-        <button class="addButton" class="addButton" alt="Add button" onclick="addItemButtonClick()">Add</button>
-        <input type="text" id="input" class="input" placeholder="Enter an item...." oninput="">
-    </div>
-</header> 
-
-<div class="content">
-    <ul id="list">
-        <!-- /* this will be added with JS */  -->
-        <!-- <li class="item">
-            <button class="checkBox" id="0" onclick="">O</button>
-            <input type="text" class="text" value="Go for a run">
-            <button class="removeButton" id="0" onclick="">Remove</button>  
-        </li> -->
-
-    </ul>
-    
-</div>
-
-<h2>Dog API</h2>
-<img id="doggy"></img>
-
+    <section>
+        <header class= "header">
+            <h1>To Do List</h1> 
+            <div class="clear">
+                <i class="refresh-icon"></i>
+            </div>
+            <div id="date"></div>
+            <div class="add-to-do">
+                <input type="text" id="input" class="input" placeholder="Enter...." oninput="">
+                <button class="addButton" class="addButton" alt="Add button" onclick="addItemButtonClick()">Add</button>
+            </div>
+        </header> 
+        
+        <div class="content">
+            <ul id="list">
+                <!-- /* this will be added with JS */  -->
+                <!-- <li class="item">
+                    <button class="checkBox" id="0" onclick="">O</button>
+                    <input type="text" class="text" value="Go for a run">
+                    <button class="removeButton" id="0" onclick="">Remove</button>  
+                </li> -->
+        
+            </ul>
+            
+        </div>
+    </section>
 
 
-</div>
+<footer class="APIDOG"> 
+    <h2>Dog API</h2>
+    <img id="doggy"></img>
+</footer>
 
 
 </body>

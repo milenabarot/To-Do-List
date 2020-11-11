@@ -63,7 +63,7 @@ function addToDo(toDo, id, done, bin) {
     const item = `<li class="item">
         <button class="${DONE}" id="${id}" onclick="completeToDo(event)"></button>
         <input id="${id}" type="text" oninput="editToDo(event)" class="text ${LINE}" value="${toDo}">
-        <button class="removeButton" id="${id}" onclick="removeToDo(event)">Remove</button>  
+        <button class="removeButton" id="${id}" onclick="removeToDo(event)"></button>  
         </li>`;
     
     const position = "beforeend";
@@ -148,6 +148,9 @@ const editToDo = function (event) {
 
 
 }
+
+
+// Experimenting with adding API
 
 const doggy = document.querySelector("#doggy");
 
