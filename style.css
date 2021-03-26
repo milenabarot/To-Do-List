@@ -1,200 +1,180 @@
 /* core styles */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Bree Serif', serif;
-    margin: 30px;
+  font-family: "Bree Serif", serif;
+  margin: 30px;
 }
 
 section {
-    font-family: 'Bree Serif', serif;
-    margin: 10% 32%;
-    max-width: 650px;
-    min-width: 350px;
-    padding: 55px 50px;
-    background-color: rgb(197, 216, 242, 0.4);
-    border-radius: 25px;
-    box-shadow: -3px 5.5px 10px 2px gray;
+  font-family: "Bree Serif", serif;
+  margin: 10% 32%;
+  max-width: 650px;
+  min-width: 350px;
+  padding: 55px 50px;
+  background-color: rgb(197, 216, 242, 0.4);
+  border-radius: 25px;
+  box-shadow: -3px 5.5px 10px 2px gray;
 }
 
 .header {
-    padding: 0px 0px 15px 0px;
-    text-align: center;
+  padding: 0px 0px 15px 0px;
+  text-align: center;
 }
 
 .header h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 35px;
-    text-shadow: 2px 2px 2px gray;
+  font-family: "Roboto Mono", monospace;
+  font-size: 35px;
+  text-shadow: 2px 2px 2px gray;
 }
 
 input[type="text"] {
-    font-family: 'Bree Serif', serif;
+  font-family: "Bree Serif", serif;
 }
 
 button {
-    font-family: 'Bree Serif', serif;
+  font-family: "Bree Serif", serif;
 }
 
 /* to do input styles */
 
 .header input[type="text"] {
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    color: rgba(29, 25, 56, 0.8);
-    background-color: rgb(192, 227, 238, 0.8);
-    transition: 0.7s ease-in-out;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(29, 25, 56, 0.8);
+  background-color: rgb(192, 227, 238, 0.8);
+  transition: 0.7s ease-in-out;
 }
 
 .header input[type="text"]:hover {
-    background-color: rgba(131, 179, 128, 0.4);
-    box-shadow: -1px 1.5px 4px 1px gray
+  background-color: rgba(131, 179, 128, 0.4);
+  box-shadow: -1px 1.5px 4px 1px gray;
 }
 
 .addButton {
-    border: none;
-    font-size: 18px;
-    padding: 12px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: rgb(192, 227, 238, 0.8);
-    transition: 0.7s ease-in;
+  border: none;
+  font-size: 18px;
+  padding: 12px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(192, 227, 238, 0.8);
+  transition: 0.7s ease-in;
 }
 
 .addButton:hover {
-    background-color: rgba(131, 179, 128, 0.3)
+  background-color: rgba(131, 179, 128, 0.3);
 }
 
 /* refresh button and date */
 
 .clear {
-    text-align: center;
-    padding: 9px;
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  padding: 9px;
+  display: flex;
+  justify-content: center;
 }
 
 .refresh-icon {
-    background-image: url("/refresh-button.png");
-    cursor: pointer;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 20px;
+  background-image: url("/refresh-button.png");
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
 #date {
-    padding: 18px;
-    color: rgb(29, 25, 56, 0.6);
-    font-size: 20px;
+  padding: 18px;
+  color: rgb(29, 25, 56, 0.6);
+  font-size: 20px;
 }
 
 /* list styles */
 
 .content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #list {
-    padding-top: 5px;
-    list-style: none;
-    align-self: center;
-    margin: 0px;
-    padding-left: 0px;
+  padding-top: 5px;
+  list-style: none;
+  align-self: center;
+  margin: 0px;
+  padding-left: 0px;
 }
 
 .text {
-    padding: 10px;
+  padding: 10px;
 }
 
-
 .item input[type="text"] {
-    border: none;
-    font-size: 19px;
-    padding: 5px;
-    border-radius: 5px;
-    color: black;
-    background-color: rgba(253, 253, 251, 0.8);
-    transition: 0.7s ease-in-out;
-    outline: none;
-    margin: 7px 7px 7px 5px;
+  border: none;
+  font-size: 19px;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  background-color: rgba(253, 253, 251, 0.8);
+  transition: 0.7s ease-in-out;
+  outline: none;
+  margin: 7px 7px 7px 5px;
 }
 
 .item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* check/cross boxes and line through classes */
 
 .checkBox {
-    border: 2px solid black;
-    cursor: pointer;
-    background-color: lightcyan;
-    font-weight: bold;
-    min-height: 25px;
-    min-width: 25px;
-    border-radius: 3px;
-    margin: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: lightcyan;
+  font-weight: bold;
+  min-height: 25px;
+  min-width: 25px;
+  border-radius: 3px;
+  margin: 5px;
 }
 
 .tickBox {
-    background-image: url("/check\ image.png");
-    background-color: lightcyan;
-    border: 2px solid black;
-    cursor: pointer;
-    min-height: 25px;
-    background-size: 22px 22px;
-    background-repeat: no-repeat;
-    min-width: 25px;
-    border-radius: 3px;
-    margin: 5px;
+  background-image: url("/check\ image.png");
+  background-color: lightcyan;
+  border: 2px solid black;
+  cursor: pointer;
+  min-height: 25px;
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  min-width: 25px;
+  border-radius: 3px;
+  margin: 5px;
 }
 
 .removeButton {
-    background-image: url("/bin\ icon.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 31px;
-    min-width: 33px;
-    border: none;
-    cursor: pointer;
-    background-color: rgb(192, 227, 238, 0.8);
-    padding: 15px;
-    border-radius: 2px;
-    transition: 0.7s ease-in-out;
-    margin: 5px;
+  background-image: url("/bin\ icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 31px;
+  min-width: 33px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(192, 227, 238, 0.8);
+  padding: 15px;
+  border-radius: 2px;
+  transition: 0.7s ease-in-out;
+  margin: 5px;
 }
 
 .removeButton:hover {
-    background-color: rgba(131, 179, 128, 0.3)
+  background-color: rgba(131, 179, 128, 0.3);
 }
-
-
-
 
 .lineThrough {
-    text-decoration: line-through;
-}
-
-
-
-/* Footer API experimenting */
-
-
-
-.APIDOG {
-    font-family: 'Bree Serif', serif;
-    margin: 30px;
-    padding: 100px 200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  text-decoration: line-through;
 }
